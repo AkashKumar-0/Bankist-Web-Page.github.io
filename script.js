@@ -176,11 +176,12 @@ const displayMovements = function (acc, sort = false) {
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
-// to login page
+// for back to the login page
 const restart = function () {
   containerApp.style.display = 'none';
   btnLogout.style.display = 'none';
   loginSection.style.display = 'flex';
+   labelWelcome.textContent = 'Log in to get started';
 };
 
 const calcDisplayBalance = function (acc) {
@@ -275,13 +276,8 @@ btnLogin.addEventListener('click', function (e) {
     }`;
 
     containerApp.style.display = 'grid';
+    
     const time = new Date();
-    // const date = new Intl.DateTimeFormat('hi').format(time);
-    // const hour = String(time.getHours()).padStart(2, 0);
-    // const min = `${time.getMinutes()}`.padStart(2, 0);
-    //remeber pad start is work for string not number so both above lines are true
-    // labelDate.textContent = `${date}, ${hour}:${min}`;
-
     const options = {
       hour: 'numeric',
       min: 'numeric',
